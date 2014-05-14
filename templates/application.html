@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	{% block head %}
+	<meta charset="UTF-8">
+	<title>{% block title %} Forge {% endblock %}</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen">
+
+	{% endblock %}
+</head>
+<body>
+	  <!-- Navigation & Logo-->
+        <div class="mainmenu-wrapper">
+	        <div class="container">
+		        <nav id="mainmenu" class="mainmenu pull-right">
+					<ul>
+						<li class="logo-wrapper"><a href="{{ url_for('home') }}">Forge</a></li>
+						<li class="active">
+							<a href="{{ url_for('home') }}">Home</a>
+						</li>
+						<li>
+							<a href="#section-about">About</a>
+						</li>
+						<li>
+							<a href="#section-faq">FAQ</a>
+						</li>
+						<li>
+							<a href="#section-contact">Contact-Us</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	{% block body %}
+	<section class="featured">
+			<div class="container"> 
+				<div class="row mar-bot40">
+					<div class="col-md-8 col-md-offset-2"> 
+						
+						<div class="align-center">
+							<h2 class="slogan">Forge is a thing for hackers</h2>
+							<p class="lead">
+							At Forge we believe that learning should be self-driven, therefore
+							we want to give you the opportunity to be transformed into the 
+							kind of programmer you always wanted.
+				
+							</p>	
+							<a class="btn btn-forge-white" href="#section-register">Start Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About -->
+	    <div class="section" id="section-about">
+			<div class="container">
+				<div class="page-header">
+					<h2>About</h2>
+				</div>
+				<div class="row">
+				</div>
+			</div>
+		</div>
+		<!-- Application Form -->
+	    <section class="section" id="section-register">
+			<div class="container">
+				<div class="page-header">
+					<h2>Get Involved</h2>
+				</div>
+				<div class="row">
+				</div>
+			</div>
+		</section>
+
+		<!-- faq -->
+	    <section class="section" id="section-faq">
+			<div class="container">
+				<div class="page-header">
+					<h2>FAQ</h2>
+				</div>
+				<div class="row">
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Us -->
+	    <section class="section" id="section-contact">
+			<div class="container">
+				<div class="page-header">
+					<h2>Contact Us</h2>
+				</div>
+				<div class="row">
+				</div>
+			</div>
+		</section>
+
+	{% endblock %}
+	
+	 <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
