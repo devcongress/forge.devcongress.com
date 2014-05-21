@@ -7,6 +7,9 @@
 /*--------------------------------------------------------------------------
 	General Style
 --------------------------------------------------------------------------*/
+html, body {
+  height: 100%;
+}
 body {
 	background: url(../images/page-background.png);
 } 
@@ -197,6 +200,8 @@ section.featured {
 	padding: 60px 0 160px;
 	background: #16a085;
 	color: #70B9B0;
+  height: 80%;
+  overflow: hidden;
 }
 
 section.featured h2.slogan {
