@@ -162,6 +162,10 @@ a:hover {
   font-weight: 600 !important;
 }
 
+.mainmenu #apply-but {
+
+}
+
 @media screen and (max-width: 979px) {
   .mainmenu {
     font-size: 0.8em;
@@ -200,7 +204,7 @@ section.featured {
 	padding: 60px 0 160px;
 	background: #16a085;
 	color: #70B9B0;
-  height: 80%;
+  height: 90%;
   overflow: hidden;
 }
 
@@ -237,6 +241,17 @@ section.featured h2 {
   margin-bottom: 0;
   text-transform: none;
 }
+
+#section-about {
+  background-color: #fff;
+}
+
+#section-about .thumbnail {
+  border-width: 0px;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+
 
 /*--------------------------------------------------------------------------
 + form Style
