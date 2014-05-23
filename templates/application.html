@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<title>{% block title %} Forge {% endblock %}</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen">
 
 	{% endblock %}
@@ -17,21 +16,11 @@
 		        <nav id="mainmenu" class="mainmenu">
 					<ul>
 						<li class="logo-wrapper"><a href="{{ url_for('home') }}">Forge</a></li>
-						<li class="active">
-							<a href="{{ url_for('home') }}">Home</a>
-						</li>
-						<li>
-							<a href="#section-about">About</a>
-						</li>
-						<li>
-							<a href="#section-faq">FAQ</a>
-						</li>
-						<li>
-							<a href="#section-footer">Contact Us</a>
-						</li>
-						<li>
-							<button id="apply-but" class="btn btn-primary"><a href="#section-register">apply</a></button>
-						</li>
+						<li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+						<li><a href="#section-about">About</a></li>
+						<li><a href="#section-faq">FAQ</a></li>
+						<li><a href="#section-footer">Contact Us</a></li>
+						<li><button id="apply-but" class="btn btn-primary"><a href="#section-register">apply</a></button></li>
 					</ul>
 				</nav>
 			</div>
@@ -41,15 +30,9 @@
 			<div class="container"> 
 				<div class="row mar-bot40">
 					<div class="col-md-8 col-md-offset-2"> 
-						
 						<div class="align-center">
 							<h2 class="slogan">A thing for hackers</h2>
-							<p class="lead">
-							At Forge we believe that learning should be self-driven, therefore
-							we want to give you the opportunity to be transformed into the 
-							kind of programmer you always wanted.
-				
-							</p>	
+							<p class="lead">At Forge we believe that learning should be self-driven, therefore we want to give you the opportunity to be transformed into the kind of programmer you always wanted.</p>	
 							<a class="btn btn-forge-white" href="#section-register">Start Now</a>
 						</div>
 					</div>
@@ -76,15 +59,8 @@
 							<i class="fa fa-code fa-5x"></i>
 							<div class="caption">
 								<h3>Learn</h3>
-								<p >
-									At Forge we encourage individuals to 
-									to come in knowing what they want to be good at and what they want 
-									to learn. 
-								</p>
-								<p >
-									We will give you the necessary tools and the environment for you 
-									to master whatever you want to be good at.
-								</p>
+								<p>At Forge we encourage individuals to come in knowing what they want to be good at and what they want to learn.</p>
+								<p>We will give you the necessary tools and the environment for you to master whatever you want to be good at.</p>
 							</div>
 						</div>
 					</div>
@@ -93,14 +69,8 @@
 							<i class="fa fa-building-o fa-5x"></i>
 							<div class="caption">
 								<h3>Build</h3>
-								<p>
-									You will get the opportunity to build amazing and relevant 
-									products that will make a difference in the lives of people.
-
-								</p>
-								<p>
-									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-								</p>
+								<p>You will get the opportunity to build amazing and relevant products that will make a difference in the lives of people.</p>
+								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.>
 							</div>
 						</div>
 					</div>
@@ -109,12 +79,8 @@
 							<i class="fa fa-share fa-5x"></i>
 							<div class="caption">
 								<h3>Contribute</h3>
-								<p>
-									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-								</p>
-								<p>
-									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-								</p>
+								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</p>
+								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</p>
 							</div>
 						</div>
 					</div>
@@ -141,15 +107,15 @@
 							<form action="{{ url_for('apply') }}"  method="post" role="form">
 								<div class="form-group">
 									<label for="fullName" >Full Name</label>
-										<input type="text" name="fullName" id="fullName" class="form-control third">
+									<input type="text" name="fullName" id="fullName" class="form-control third">
 								</div>
 								<div class="form-group">
 									<label for="email" >Email</label>
-										<input type="email" name="email" id="email" class="form-control third" >
+									<input type="email" name="email" id="email" class="form-control third" >
 								</div>
 								<div class="form-group">
 									<label for="contact" >Phone Number</label>
-										<input type="tel" name="contact" id="contact" class="form-control medium">
+									<input type="tel" name="contact" id="contact" class="form-control medium">
 								</div>
 								<div class="form-group">
 									<label for="twitter">Links</label>
@@ -207,25 +173,15 @@
 					<div class="col-md-10">
 						<dl>
 							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
+							<dd>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</dd>
 							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
+							<dd>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</dd>
 							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
+							<dd>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</dd>
 							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
+							<dd>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</dd>
 							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
+							<dd>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</dd>
 						</dl>
 					</div>
 				</div>
@@ -238,31 +194,28 @@
 				<div class="row">
 					<div class="col-md-4">
 						<ul class="forge-footer-span">
-							<li><a href="">Home</a></li>
-							<li><a href="">About</a></li>
-							<li><a href="">FAQ</a></li>
+							<li><a href="/">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#faq">FAQ</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
 						<ul class="forge-footer-span">
-							<li>Address: </li>
-							<li>Phone: </li>
-							<li>Email: </li>
+							<li>Phone: <a href="tel:+233245161662">+2332451161662</a></li>
+							<li>Email: <a href="mailto:devcongress@gmail.com">devcongress@gmail.com</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
 						<ul class="forge-footer-span">
-							<a href=""><i class="fa fa-facebook fa-3x forge-right-pad"></i></a>
-							<a href=""><i class="fa fa-twitter fa-3x forge-right-pad"></i></a>
-							<a href=""><i class="fa fa-google-plus fa-3x forge-right-pad"></i></a>
-							<li></li>
+							<a href="http://facebook.com/devcongress"><i class="fa fa-facebook fa-2x forge-right-pad"></i></a>
+							<a href="http://twitter.com/devcongress"><i class="fa fa-twitter fa-2x forge-right-pad"></i></a>
+							<a href="http://plus.google.com/+DevCongress"><i class="fa fa-google-plus fa-2x forge-right-pad"></i></a>
 						</ul>
 					</div>
-					
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<div class="footer-copyright">&copy; 2014 Forge. All rights reserved</div>
+						<div class="footer-copyright">&copy; 2014 Forge, <a href="http://devcongress.com">DevCongress</a> &amp; <a href="http://zottech.com">Zottech</a>. All rights reserved</div>
 					</div>
 				</div>
 			</div>
