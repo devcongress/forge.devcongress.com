@@ -102,6 +102,7 @@ a:hover {
     letter-spacing: 1px;
     transition: all 0.4s ease-in-out 0s;
 }
+
 .btn {
     display: inline-block;
     margin-bottom: 0px;
@@ -118,6 +119,14 @@ a:hover {
     border-radius: 4px;
     -moz-user-select: none;
 } 
+
+#btn-apply {
+    padding: 6px 12px;
+    background: none repeat scroll 0% 0% #EDF6F6;
+    margin-left: 30px;
+}
+
+
 /*--------------------------------------------------------------------------
 +	Main Menu Style
 --------------------------------------------------------------------------*/
@@ -201,11 +210,29 @@ a:hover {
 =========================== */
 
 section.featured {
-	padding: 60px 0 160px;
+  padding: 90px 0px;
 	background: #16a085;
 	color: #70B9B0;
   height: 90%;
-  overflow: hidden;
+}
+
+@media screen and (max-width: 479px) {
+  section.featured {
+    padding-top: 0;
+  }
+  section.featured h2.slogan {
+    font-size: 30px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 479px) and (orientation: landscape) {
+  section.featured {
+    padding-top: 0;
+  }
+  section.featured h2.slogan {
+    font-size: 40px;
+  }
 }
 
 section.featured h2.slogan {
@@ -218,10 +245,32 @@ section.featured h2 {
 	border-bottom: 0px;
 }
 
+section.featured p {
+  color: #F6EEEE;
+}
 
 .align-center {
     text-align: center;
 }
+
+/*===========================
+  --- Banner section ----
+=========================== */
+.banner {
+  padding: 105px 0px;
+  background: #16a085;
+  color: #FFF;
+  overflow: hidden;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.heading {
+  color: #FFF;
+  font-size: 3em;
+  line-height: 1.2em;
+}
+
 
 /*--------------------------------------------------------------------------
 + Section Style
@@ -249,6 +298,85 @@ section.featured h2 {
 #section-about .thumbnail {
   border-width: 0px;
   box-shadow: 0px 0px 0px 0px;
+}
+
+.faq h5 {
+  font-weight: 900;
+  font-size: 1.3em;
+  line-height: 1.5;
+}
+
+.faq p {
+  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+.program a{
+  color: #4B606C;
+  
+}
+
+.program {
+  padding: 20px 0;
+}
+.program p {
+  font-weight: 300;
+  line-height: 35.9991px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #4B606C;
+}
+
+.program h1 {
+  color: #4B606C;
+}
+
+.program-title {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0px;
+  background-color: #F6F5F3;
+}
+
+.learn {
+  background-color: #4B606C;
+}
+
+.learn h1 {
+  color: #FFF;
+}
+
+.learn p {
+  color: #FFF;
+  font-weight: 300;
+  line-height: 35.9991px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.teach {
+  padding-top: 40px;
+}
+
+.teach label{
+  font-weight: 700;
+  font-size: 20px;
+  color: #999;
+
+}
+
+.teach p {
+  font-weight: 400;
+  line-height: 34px;
+  font-size: 20px;
+}
+
+.phase-two {
+  background-color: #ffffff;
+}
+
+.phase-three , .phase-one{
+  background-color: #F6F6F6;
 }
 
 
@@ -315,6 +443,9 @@ footer ul li {
   font-size: 0.9em;
 }
 
+.social {
+
+}
 
 /*--------------------------------------------------------------------------
 	FAQ Style
