@@ -11,32 +11,41 @@
 	{% endblock %}
 </head>
 <body>
+	{# macro for making menu items active #}
+	{% macro active(path) -%}
+		{% if request.path == path %}
+			class="active"
+		{% endif %}
+	{%- endmacro %}
 	  <!-- Navigation & Logo-->
         <div class="mainmenu-wrapper">
 	        <div class="container">
+	        	
 		        <nav id="mainmenu" class="mainmenu">
 					<ul>
 						<li class="logo-wrapper"><a href="{{ url_for('home') }}">Forge</a></li>
-						<li class="active">
+						<li {{ active(url_for('home')) }}>
 							<a href="{{ url_for('home') }}">Home</a>
 						</li>
-						<li>
-							<a href="#section-about">About</a>
+						<li {{ active(url_for('program')) }}>
+							<a href="{{ url_for('program') }}">The Program</a>
+						</li>
+						<li {{ active(url_for('faq')) }}>
+							<a href="{{ url_for('faq') }}">FAQ</a>
 						</li>
 						<li>
-							<a href="#section-faq">FAQ</a>
+							<a href="{{ url_for('home') }}#section-footer">Contact Us</a>
 						</li>
-						<li>
-							<a href="#section-footer">Contact Us</a>
-						</li>
-						<li>
-							<button id="apply-but" class="btn btn-primary"><a href="#section-register">apply</a></button>
+						<li {{ active(url_for('apply')) }}>
+							<a href="{{ url_for('apply') }}" id="btn-apply" class="btn-apply btn btn-forge-white">Apply Now</a>
 						</li>
 					</ul>
 				</nav>
+
 			</div>
 		</div>
-	{% block body %}
+	
+	{% block banner %}
 	<section class="featured">
 			<div class="container"> 
 				<div class="row mar-bot40">
@@ -50,26 +59,18 @@
 							kind of programmer you always wanted.
 				
 							</p>	
-							<a class="btn btn-forge-white" href="#section-register">Start Now</a>
+							<a class="btn btn-forge-white" href="{{ url_for('apply') }}">Start Now</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		{% endblock banner %}
 
-		<!-- About -->
-		<!-- <div class="section forge-section-head" id="section-about">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1>About</h1>
-					</div>
-				</div>
-			</div>
-		</div> -->
+		
+		{% block body %}
 	    <div class="section" id="section-about">
 			<div class="container">
-				
 				<div class="row">
 					<div class="col-sm-6 col-md-4">
 						<div class="thumbnail text-center">
@@ -123,116 +124,47 @@
 			</div>
 		</div>
 		<!-- Application Form -->
-		<div class="section forge-section-head" id="section-register">
+		<!-- <div class="section forge-section-head" id="section-register">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-							<h1>Get Involved</h1>
+							<h1>Up your software engineering skills in 12 weeks</h1>
 					</div>
 				</div>
 			</div>
-		</div>
-	    <section class="section" id="register">
+		</div> -->
+	    <section class="section program">
 			<div class="container">
-				
-				<div class="row">
-					<div class="col-sm-6 col-md-offset-3 ">
-						<div class="forge-form">
-							<form action="{{ url_for('apply') }}"  method="post" role="form">
-								<div class="form-group">
-									<label for="fullName" >Full Name</label>
-										<input type="text" name="fullName" id="fullName" class="form-control third">
-								</div>
-								<div class="form-group">
-									<label for="email" >Email</label>
-										<input type="email" name="email" id="email" class="form-control third" >
-								</div>
-								<div class="form-group">
-									<label for="contact" >Phone Number</label>
-										<input type="tel" name="contact" id="contact" class="form-control medium">
-								</div>
-								<div class="form-group">
-									<label for="twitter">Links</label>
-									<div class="input-group">
-										<div class="input-group-addon medium">@</div>
-										<input type="text" name="twitter" id="twitter" class="form-control medium" placeholder="twitter">
-									</div>
-									<div class="input-group">
-										<div class="input-group-addon"><i class="fa fa-facebook"></i></div>
-										<input type="text" class="form-control medium" name="facebook" id="facebook" placeholder="Facebook">
-									</div>
-									<div class="input-group">
-										<div class="input-group-addon"><i class="fa fa-github"></i></div>
-										<input type="text" id="github" name="github" class="form-control medium" placeholder="GitHub">
-									</div>
-									<div class="input-group">
-										<div class="input-group-addon"><i class="fa fa-linkedin"></i></div>
-										<input type="text" id="linkedIn" name="linkedIn" placeholder="LinkedIn" class="form-control medium">
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="about">Please tell us about yourself</label>
-									<textarea name="about" id="" cols="30" rows="10" class="form-control"></textarea>
-								</div>
-								<div class="form-group">
-									<label for="background">Give a brief account of your programming experience</label>
-									<textarea name="background" id="background" cols="30" rows="10" class="form-control"></textarea>
-								</div>
-								<div class="form-group">
-									<label for="expectation">What do you intend to achieve through forge?</label>
-									<textarea name="expectation" id="expectation" cols="30" rows="10" class="form-control"></textarea>
-								</div>
-								<button type="submit" name="submit" id="submit" class="btn btn-success">Submit</button>
-							</form>
-						</div>
-					</div>
+				<div class="row text-center">
+					<h1>Up your software engineering skills in 12 weeks</h1>
+					<p>
+						Forge is a full-time 12-week intensive programme that is designed 
+						to help you improve your software engineering skills. 
+						Over twelve weeks, you'll learn the neccessary skills needed to make
+						you a software engineer. You will learn computer science fundamentals
+						and software engineering best practices
+					</p>
+					<a class="btn btn-forge-white" href="{{ url_for('program') }}">The Program Details</a>
 				</div>
 			</div>
 		</section>
 
-		<!-- faq -->
-		<div class="section forge-section-head" id="section-faq">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-							<h1>Frequently Asked Questions</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	    <section class="section faq">
-			<div class="container">
-								
-				<div class="row">
-					<div class="col-md-10">
-						<dl>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-						</dl>
-					</div>
-				</div>
-			</div>
-		</section>
 
+		<section class="section learn">
+			<div class="container">
+				<div class="row text-center">
+					<h1>Learn from the experts</h1>
+					<p>
+						Our instructors are individuals who are in the software industry.
+						They give students real world practical education and take hands-on approach to teaching.
+					</p>
+					<a class="btn btn-forge-white" href="{{ url_for('teach') }}">Be an instructor</a>
+				</div>
+			</div>
+		</section> 
+		{% endblock body %}
 		<!-- Footer -->
+		{% block footer %}
 		<footer class="footer" id="section-footer">
 			<div class="container">
 				<div class="row">
@@ -251,11 +183,11 @@
 						</ul>
 					</div>
 					<div class="col-md-4">
-						<ul class="forge-footer-span">
-							<a href="https://facebook.com/devcongress"><i class="fa fa-facebook fa-3x forge-right-pad"></i></a>
-							<a href="https://twitter.com/devcongress"><i class="fa fa-twitter fa-3x forge-right-pad"></i></a>
-							<a href="https://github.com/devcongress"><i class="fa fa-github fa-3x forge-right-pad"></i></a>
-							<li></li>
+						<ul class="forge-footer-span social">
+							<a href="https://facebook.com/devcongress"><i class="fa fa-facebook fa-2x forge-right-pad"></i></a>
+							<a href="https://twitter.com/devcongress"><i class="fa fa-twitter fa-2x forge-right-pad"></i></a>
+							<a href="https://github.com/devcongress"><i class="fa fa-github fa-2x forge-right-pad"></i></a>
+
 						</ul>
 					</div>
 					
@@ -267,8 +199,9 @@
 				</div>
 			</div>
 		</footer>
+		{% endblock footer %}
 
-	{% endblock %}
+	
 	
 	 <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
