@@ -16,7 +16,28 @@ def home():
 
 @app.route('/apply', methods=['GET','POST'])
 def apply():
-		pass
+  if request.method == 'GET':
+    return render_template('apply.html')
+  else:
+    pass
+
+@app.route('/faq')
+def faq():
+  return render_template('faq.html')
+
+@app.route('/teach')
+def teach():
+  if request.method == 'GET':
+    return render_template('teach.html')
+  else:
+    pass
+
+@app.route('/program')
+def program():
+  if request.method == 'GET':
+    return render_template('program.html')
+  else:
+    pass
 
 if __name__ == '__main__':
     app.run(debug=True)
