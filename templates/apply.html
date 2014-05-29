@@ -8,7 +8,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="heading">{% block heading %}Apply to forge{% endblock %}</h1>			
+				<h1 class="heading">{% block heading %}Apply to <code>FORGE</code>{% endblock %}</h1>
+				<p><em>(Important: You should have at least <strong>3 months</strong> programming experience.)</em></p>
 			</div>
 		</div>
 	</div>
@@ -16,20 +17,9 @@
 {% endblock banner %}
 
 {% block body %}
-
-<!-- Application Form -->
-		<!-- <div class="section forge-section-head" id="section-register">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-							<h1>Get Involved</h1>
-					</div>
-				</div>
-			</div>
-		</div> -->
 	    <section class="section" id="register">
 			<div class="container">
-				
+
 				<div class="row">
 					<div class="col-sm-6 col-md-offset-3 ">
 						<div class="forge-form">
@@ -53,10 +43,6 @@
 										<input type="text" name="twitter" id="twitter" class="form-control medium" placeholder="twitter">
 									</div>
 									<div class="input-group">
-										<div class="input-group-addon"><i class="fa fa-facebook"></i></div>
-										<input type="text" class="form-control medium" name="facebook" id="facebook" placeholder="Facebook">
-									</div>
-									<div class="input-group">
 										<div class="input-group-addon"><i class="fa fa-github"></i></div>
 										<input type="text" id="github" name="github" class="form-control medium" placeholder="GitHub">
 									</div>
@@ -66,15 +52,15 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="about">Please tell us about yourself</label>
-									<textarea name="about" id="" cols="30" rows="10" class="form-control"></textarea>
+									<label for="ambition">What do you want to be doing 2 years from now?</label>
+									<textarea name="ambition" id="" cols="30" rows="10" class="form-control"></textarea>
 								</div>
 								<div class="form-group">
-									<label for="background">Give a brief account of your programming experience</label>
-									<textarea name="background" id="background" cols="30" rows="10" class="form-control"></textarea>
+									<label for="fizzbuzz">Paste your answer/code to <a href="http://c2.com/cgi/wiki?FizzBuzzTest">Fizz Buzz Test</a> below</label>
+									<textarea name="fizzbuzz" id="background" cols="30" rows="10" class="form-control"></textarea>
 								</div>
 								<div class="form-group">
-									<label for="expectation">What do you intend to achieve through forge?</label>
+									<label for="expectation">Why do you want to attend <code>FORGE</code>?</label>
 									<textarea name="expectation" id="expectation" cols="30" rows="10" class="form-control"></textarea>
 								</div>
 								<button type="submit" name="submit" id="submit" class="btn btn-success">Submit</button>
