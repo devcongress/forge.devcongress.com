@@ -20,15 +20,12 @@
 	  <!-- Navigation & Logo-->
         <div class="mainmenu-wrapper">
 	        <div class="container">
-	        	
+
 		        <nav id="mainmenu" class="mainmenu">
 					<ul>
 						<li class="logo-wrapper"><a href="{{ url_for('home') }}">Forge</a></li>
 						<li {{ active(url_for('home')) }}>
 							<a href="{{ url_for('home') }}">Home</a>
-						</li>
-						<li {{ active(url_for('program')) }}>
-							<a href="{{ url_for('program') }}">The Program</a>
 						</li>
 						<li {{ active(url_for('faq')) }}>
 							<a href="{{ url_for('faq') }}">FAQ</a>
@@ -44,7 +41,7 @@
 
 			</div>
 		</div>
-	
+
 	{% block banner %}
 	<section class="featured">
 			<div class="container">
@@ -57,7 +54,7 @@
 							At Forge we believe that learning should be self-driven, therefore
 							we want to give you the opportunity to be transformed into the
 							kind of programmer you always wanted.
-							</p>	
+							</p>
 							<a class="btn btn-forge-white" href="{{ url_for('apply') }}">Start Now</a>
 						</div>
 					</div>
@@ -66,7 +63,7 @@
 		</section>
 		{% endblock banner %}
 
-		
+
 		{% block body %}
 	    <div class="section" id="section-about">
 			<div class="container">
@@ -137,8 +134,8 @@
 				<div class="row text-center">
 					<h1>Up your software engineering skills in 12 weeks</h1>
 					<p>
-						Forge is a full-time 12-week intensive programme that is designed 
-						to help you improve your software engineering skills. 
+						Forge is a full-time 12-week intensive programme that is designed
+						to help you improve your software engineering skills.
 						Over twelve weeks, you'll learn the neccessary skills needed to make
 						you a software engineer. You will learn computer science fundamentals
 						and software engineering best practices
@@ -160,7 +157,7 @@
 					<a class="btn btn-forge-white" href="{{ url_for('teach') }}">Be an instructor</a>
 				</div>
 			</div>
-		</section> 
+		</section>
 		{% endblock body %}
 		<!-- Footer -->
 		{% block footer %}
