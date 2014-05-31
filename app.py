@@ -41,10 +41,6 @@ def teach():
   else:
     pass
 
-@app.route('/program')
-def program():
-    return render_template('program.html')
-
 
 # Models, models.
 class Hacker(db.Model):
