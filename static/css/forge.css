@@ -11,7 +11,8 @@ html, body {
   height: 100%;
 }
 body {
-	background: url(../images/page-background.png);
+  background: url(../images/page-background.png);
+  font-family: "Lato";
 } 
 
 .section {
@@ -141,10 +142,6 @@ a:hover {
   border-bottom: 4px solid #4f8db3;
   z-index: 4;
 }
-.mainmenu {
-  width: 100%;
-  
-}
 .mainmenu ul {
   margin: 0;
   padding: 0;
@@ -169,10 +166,6 @@ a:hover {
 .mainmenu > ul > li.active > a {
   color: #4f8db3;
   font-weight: 600 !important;
-}
-
-.mainmenu #apply-but {
-
 }
 
 @media screen and (max-width: 979px) {
@@ -210,7 +203,11 @@ a:hover {
 =========================== */
 
 section.featured {
-  padding: 90px 0px;
+  margin-top: -20px;
+	padding: 60px 0 80px;
+	background: #16a085;
+	color: #BDC4C3;
+  overflow: hidden;
 	background: #16a085;
 	color: #70B9B0;
   height: 90%;
@@ -384,20 +381,6 @@ section.featured p {
 /*--------------------------------------------------------------------------
 + form Style
 --------------------------------------------------------------------------*/
-.forge-form {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px 20px 10px 20px;
-  -webkit-border-radius: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 5px;
-  -moz-background-clip: padding;
-  border-radius: 5px;
-  background-clip: padding-box;
-  -webkit-box-shadow: inset 0 1px #fff,0 0 4px #c8cfe6;
-  -moz-box-shadow: inset 0 1px #fff,0 0 4px #c8cfe6;
-  box-shadow: inset 0 1px #fff,0 0 4px #c8cfe6;
-  color: inset 0 1px #fff,0 0 4px #c8cfe6;
-}
 
 input.medium {
 	width: 50%;

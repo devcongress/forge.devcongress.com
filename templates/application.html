@@ -5,12 +5,47 @@
 	<meta charset="UTF-8">
 	<title>{% block title %} Forge {% endblock %}</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/forge.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.css') }}">
 
 	{% endblock %}
 </head>
 <body>
+<<<<<<< HEAD
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="/">
+                    <img src="{% static 'trucfund/scripts/images/nim-street-logo.png' %}" alt="Nim Street">
+                </a> -->
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+					<li class="logo-wrapper"><a href="{{ url_for('home') }}">Forge</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#faq">FAQ</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+					<li><a class="btn btn-primary" href="#register">apply</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div> <!-- navbar-default ends -->
+
+
+	<!-- {% block body %} -->
+		<section class="featured">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2"> 
+					<div class="align-center">
+						<h2 class="slogan">A thing for hackers</h2>
+						<p class="lead">At Forge we believe that learning should be self-driven, therefore we want to give you the opportunity to be transformed into the kind of programmer you always wanted.</p>	
+						<a class="btn btn-forge-white" href="register">Start Now</a>
+=======
 	{# macro for making menu items active #}
 	{% macro active(path) -%}
 		{% if request.path == path %}
@@ -57,15 +92,20 @@
 							</p>
 							<a class="btn btn-forge-white" href="{{ url_for('apply') }}">Start Now</a>
 						</div>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 					</div>
 				</div>
 			</div>
 		</section>
 		{% endblock banner %}
 
+<<<<<<< HEAD
+	    <div class="section" id="about">
+=======
 
 		{% block body %}
 	    <div class="section" id="section-about">
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-md-4">
@@ -73,6 +113,10 @@
 							<i class="fa fa-code fa-5x"></i>
 							<div class="caption">
 								<h3>Learn</h3>
+<<<<<<< HEAD
+								<p>At Forge we encourage individuals to come in knowing what they want to be good at and what they want to learn.</p>
+								<p>We will give you the necessary tools and the environment for you to master whatever you want to be good at.</p>
+=======
 								<p >
 									At Forge we encourage individuals to
 									to come in knowing what they want to be good at and what they want
@@ -82,6 +126,7 @@
 									We will give you the necessary tools and the environment for you
 									to master whatever you want to be good at.
 								</p>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 							</div>
 						</div>
 					</div>
@@ -90,6 +135,10 @@
 							<i class="fa fa-building-o fa-5x"></i>
 							<div class="caption">
 								<h3>Build</h3>
+<<<<<<< HEAD
+								<p>You will get the opportunity to build amazing and relevant products that will make a difference in the lives of people.</p>
+								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.>
+=======
 								<p>
 									You will get the opportunity to build amazing and relevant
 									products that will make a difference in the lives of people.
@@ -98,6 +147,7 @@
 								<p>
 									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
 								</p>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 							</div>
 						</div>
 					</div>
@@ -106,19 +156,119 @@
 							<i class="fa fa-share fa-5x"></i>
 							<div class="caption">
 								<h3>Contribute</h3>
+<<<<<<< HEAD
+								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</p>
+								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</p>
+=======
 								<p>
 									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
 								</p>
 								<p>
 									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
 								</p>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
+		<!-- Application Form -->
+		<div class="section forge-section-head" id="register">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Get Involved</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <section class="section" id="register">
+			<div class="forge-form container">
+				<form action="{{ url_for('apply') }}"  method="post" role="form">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="fullName" >Full Name</label>
+							<input type="text" name="fullName" id="fullName" class="form-control third">
+						</div>
+						<div class="form-group">
+							<label for="email" >Email</label>
+							<input type="email" name="email" id="email" class="form-control third" >
+						</div>
+						<div class="form-group">
+							<label for="contact" >Phone Number</label>
+							<input type="tel" name="contact" id="contact" class="form-control medium">
+						</div>
+						<div class="form-group">
+							<label for="twitter">Links</label>
+							<div class="input-group">
+								<div class="input-group-addon medium">@</div>
+								<input type="text" name="twitter" id="twitter" class="form-control medium" placeholder="twitter">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-facebook"></i></div>
+								<input type="text" class="form-control medium" name="facebook" id="facebook" placeholder="Facebook">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-github"></i></div>
+								<input type="text" id="github" name="github" class="form-control medium" placeholder="GitHub">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon"><i class="fa fa-linkedin"></i></div>
+								<input type="text" id="linkedIn" name="linkedIn" placeholder="LinkedIn" class="form-control medium">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="about">Please tell us about yourself</label>
+							<textarea name="about" id="" cols="30" rows="5" class="form-control"></textarea>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="background">A brief account of your programming experience</label>
+							<textarea name="background" id="background" cols="30" rows="5" class="form-control"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="expectation">What do you intend to achieve through forge?</label>
+							<textarea name="expectation" id="expectation" cols="30" rows="5" class="form-control"></textarea>
+						</div>
+					</div>
+					<button type="submit" name="submit" id="submit" class="btn btn-success">Submit</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- faq -->
+		<div class="section forge-section-head" id="faq">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Frequently Asked Questions</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <section class="section faq">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">
+						<dl>
+							<dt>How much does forge cost?</dt>
+							<dd>Forge is free. Yep, it is!</dd>
+							<dt>How long is forge?</dt>
+							<dd>Just enough time for you to survive. 3 months: Day. Night. Weekend.</dd>
+						</dl>
+					</div>
+=======
     <section class="section program">
     <div class="container">
       <div class="row text-center">
@@ -142,30 +292,42 @@
 						They give students real world practical education and take hands-on approach to teaching.
 					</p>
 					<a class="btn btn-forge-white" href="{{ url_for('teach') }}">Be an instructor</a>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 				</div>
 			</div>
 		</section>
 		{% endblock body %}
 		<!-- Footer -->
+<<<<<<< HEAD
+		<footer class="footer" id="contact">
+=======
 		{% block footer %}
 		<footer class="footer" id="section-footer">
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
 						<ul class="forge-footer-span">
-							<li><a href="">Home</a></li>
-							<li><a href="">About</a></li>
-							<li><a href="">FAQ</a></li>
+							<li><a href="/">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#faq">FAQ</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
 						<ul class="forge-footer-span">
-							<li>Address: </li>
-							<li>Phone: </li>
-							<li>Email: </li>
+							<li>Phone: <a href="tel:+233245161662">+2332451161662</a></li>
+							<li>Email: <a href="mailto:devcongress@gmail.com">devcongress@gmail.com</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
+<<<<<<< HEAD
+						<ul class="forge-footer-span">
+							<a href="http://facebook.com/devcongress"><i class="fa fa-facebook fa-2x forge-right-pad"></i></a>
+							<a href="http://twitter.com/devcongress"><i class="fa fa-twitter fa-2x forge-right-pad"></i></a>
+							<a href="http://plus.google.com/+DevCongress"><i class="fa fa-google-plus fa-2x forge-right-pad"></i></a>
+						</ul>
+					</div>
+=======
 						<ul class="forge-footer-span social">
 							<a href="https://facebook.com/devcongress"><i class="fa fa-facebook fa-2x forge-right-pad"></i></a>
 							<a href="https://twitter.com/devcongress"><i class="fa fa-twitter fa-2x forge-right-pad"></i></a>
@@ -173,15 +335,22 @@
 						</ul>
 					</div>
 
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<div class="footer-copyright">&copy; 2014 Forge. All rights reserved</div>
+						<div class="footer-copyright">&copy; 2014 Forge, <a href="http://devcongress.com">DevCongress</a> &amp; <a href="http://zottech.com">Zottech</a>. All rights reserved</div>
 					</div>
 				</div>
 			</div>
 		</footer>
+<<<<<<< HEAD
+
+	<!-- {% endblock %} -->
+	
+=======
 		{% endblock footer %}
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 	 <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </body>
