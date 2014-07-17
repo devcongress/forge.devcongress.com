@@ -1,0 +1,73 @@
+{% extends 'application.html' %}
+
+{% block title  %}
+	Apply
+{% endblock title %}
+{% block banner %}
+<section class="banner">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="heading">{% block heading %}Apply to <code>FORGE</code>{% endblock %}</h1>
+				<p><em>(Important: You should have at least <strong>3 months</strong> programming experience as at the time of application.)</em></p>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock banner %}
+
+{% block body %}
+	    <section class="section" id="register">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-6 col-md-offset-3">
+						<div class="forge-form">
+							<form action="{{ url_for('apply') }}"  method="post" role="form">
+								<div class="form-group ">
+									<label for="fullName" >Full Name</label>
+										<input type="text" name="fullName" id="fullName" class="form-control third">
+								</div>
+								<div class="form-group">
+									<label for="email" >Email</label>
+										<input type="email" name="email" id="email" class="form-control third" >
+								</div>
+								<div class="form-group">
+									<label for="contact" >Phone Number</label>
+										<input type="tel" name="contact" id="contact" class="form-control medium">
+								</div>
+								<div class="form-group">
+									<label for="twitter">Links</label>
+									<div class="input-group col-xs-8">
+										<div class="input-group-addon">@</div>
+										<input type="text" name="twitter" id="twitter" class="form-control" placeholder="twitter">
+									</div>
+									<div class="input-group col-xs-8">
+										<div class="input-group-addon"><i class="fa fa-github"></i></div>
+										<input type="text" id="github" name="github" class="form-control" placeholder="GitHub">
+									</div>
+									<div class="input-group col-xs-8">
+										<div class="input-group-addon"><i class="fa fa-linkedin"></i></div>
+										<input type="text" id="linkedIn" name="linkedIn" placeholder="LinkedIn" class="form-control">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="ambition">What do you want to be doing 2 years from now?</label>
+									<textarea name="ambition" id="" cols="30" rows="10" class="form-control"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="fizzbuzz">Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".</label>
+									<textarea name="fizzbuzz" id="background" cols="30" rows="10" class="form-control"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="expectation">Why do you want to attend <code>FORGE</code>?</label>
+									<textarea name="expectation" id="expectation" cols="30" rows="10" class="form-control"></textarea>
+								</div>
+								<button type="submit" name="submit" id="submit" class="btn btn-success">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+{% endblock body %}

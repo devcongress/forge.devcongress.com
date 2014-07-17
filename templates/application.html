@@ -11,6 +11,7 @@
 	{% endblock %}
 </head>
 <body>
+<<<<<<< HEAD
     <div class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
@@ -44,12 +45,67 @@
 						<h2 class="slogan">A thing for hackers</h2>
 						<p class="lead">At Forge we believe that learning should be self-driven, therefore we want to give you the opportunity to be transformed into the kind of programmer you always wanted.</p>	
 						<a class="btn btn-forge-white" href="register">Start Now</a>
+=======
+	{# macro for making menu items active #}
+	{% macro active(path) -%}
+		{% if request.path == path %}
+			class="active"
+		{% endif %}
+	{%- endmacro %}
+	  <!-- Navigation & Logo-->
+        <div class="mainmenu-wrapper">
+	        <div class="container">
+
+		        <nav id="mainmenu" class="mainmenu">
+					<ul>
+						<li class="logo-wrapper"><a href="{{ url_for('home') }}">Forge</a></li>
+						<li {{ active(url_for('home')) }}>
+							<a href="{{ url_for('home') }}">Home</a>
+						</li>
+						<li {{ active(url_for('faq')) }}>
+							<a href="{{ url_for('faq') }}">FAQ</a>
+						</li>
+						<li>
+							<a href="{{ url_for('home') }}#section-footer">Contact Us</a>
+						</li>
+						<li {{ active(url_for('apply')) }}>
+							<a href="{{ url_for('apply') }}" id="btn-apply" class="btn-apply btn btn-forge-white">Apply Now</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+
+	{% block banner %}
+	<section class="featured">
+			<div class="container">
+				<div class="row mar-bot40">
+					<div class="col-md-8 col-md-offset-2">
+
+						<div class="align-center">
+							<h2 class="slogan">A thing for hackers</h2>
+							<p class="lead">
+							At Forge we believe that learning should be self-driven, therefore
+							we want to give you the opportunity to be transformed into the
+							kind of programmer you always wanted.
+							</p>
+							<a class="btn btn-forge-white" href="{{ url_for('apply') }}">Start Now</a>
+						</div>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 					</div>
 				</div>
 			</div>
 		</section>
+		{% endblock banner %}
 
+<<<<<<< HEAD
 	    <div class="section" id="about">
+=======
+
+		{% block body %}
+	    <div class="section" id="section-about">
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6 col-md-4">
@@ -57,8 +113,20 @@
 							<i class="fa fa-code fa-5x"></i>
 							<div class="caption">
 								<h3>Learn</h3>
+<<<<<<< HEAD
 								<p>At Forge we encourage individuals to come in knowing what they want to be good at and what they want to learn.</p>
 								<p>We will give you the necessary tools and the environment for you to master whatever you want to be good at.</p>
+=======
+								<p >
+									At Forge we encourage individuals to
+									to come in knowing what they want to be good at and what they want
+									to learn.
+								</p>
+								<p >
+									We will give you the necessary tools and the environment for you
+									to master whatever you want to be good at.
+								</p>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 							</div>
 						</div>
 					</div>
@@ -67,8 +135,19 @@
 							<i class="fa fa-building-o fa-5x"></i>
 							<div class="caption">
 								<h3>Build</h3>
+<<<<<<< HEAD
 								<p>You will get the opportunity to build amazing and relevant products that will make a difference in the lives of people.</p>
 								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.>
+=======
+								<p>
+									You will get the opportunity to build amazing and relevant
+									products that will make a difference in the lives of people.
+
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
+								</p>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 							</div>
 						</div>
 					</div>
@@ -77,14 +156,24 @@
 							<i class="fa fa-share fa-5x"></i>
 							<div class="caption">
 								<h3>Contribute</h3>
+<<<<<<< HEAD
 								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</p>
 								<p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</p>
+=======
+								<p>
+									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
+								</p>
+								<p>
+									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
+								</p>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<!-- Application Form -->
 		<div class="section forge-section-head" id="register">
 			<div class="container">
@@ -179,12 +268,42 @@
 							<dd>Just enough time for you to survive. 3 months: Day. Night. Weekend.</dd>
 						</dl>
 					</div>
+=======
+    <section class="section program">
+    <div class="container">
+      <div class="row text-center">
+        <h1>Up your software engineering skills in 12 weeks</h1>
+        <p>
+          Forge is a full-time 12-week intensive programme that is designed
+          to help you improve your software engineering skills.
+          Over twelve weeks, you'll learn the neccessary skills needed to make
+          you a software engineer. You will learn computer science fundamentals
+          and software engineering best practices
+        </p>
+      </div>
+    </div>
+		</section>
+		<section class="section learn">
+			<div class="container">
+				<div class="row text-center">
+					<h1>Learn from the experts</h1>
+					<p>
+						Our instructors are individuals who are in the software industry.
+						They give students real world practical education and take hands-on approach to teaching.
+					</p>
+					<a class="btn btn-forge-white" href="{{ url_for('teach') }}">Be an instructor</a>
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 				</div>
 			</div>
 		</section>
-
+		{% endblock body %}
 		<!-- Footer -->
+<<<<<<< HEAD
 		<footer class="footer" id="contact">
+=======
+		{% block footer %}
+		<footer class="footer" id="section-footer">
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
@@ -201,12 +320,22 @@
 						</ul>
 					</div>
 					<div class="col-md-4">
+<<<<<<< HEAD
 						<ul class="forge-footer-span">
 							<a href="http://facebook.com/devcongress"><i class="fa fa-facebook fa-2x forge-right-pad"></i></a>
 							<a href="http://twitter.com/devcongress"><i class="fa fa-twitter fa-2x forge-right-pad"></i></a>
 							<a href="http://plus.google.com/+DevCongress"><i class="fa fa-google-plus fa-2x forge-right-pad"></i></a>
 						</ul>
 					</div>
+=======
+						<ul class="forge-footer-span social">
+							<a href="https://facebook.com/devcongress"><i class="fa fa-facebook fa-2x forge-right-pad"></i></a>
+							<a href="https://twitter.com/devcongress"><i class="fa fa-twitter fa-2x forge-right-pad"></i></a>
+							<a href="https://github.com/devcongress"><i class="fa fa-github fa-2x forge-right-pad"></i></a>
+						</ul>
+					</div>
+
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 				</div>
 				<div class="row">
 					<div class="col-md-12">
@@ -215,9 +344,13 @@
 				</div>
 			</div>
 		</footer>
+<<<<<<< HEAD
 
 	<!-- {% endblock %} -->
 	
+=======
+		{% endblock footer %}
+>>>>>>> 937b354122fe07beccaef46a7c065fc5077a5167
 	 <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </body>
