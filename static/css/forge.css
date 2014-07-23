@@ -1,18 +1,13 @@
-/* ==== Google font ==== */
-@import url('http://fonts.googleapis.com/css?family=Lato:400,300,700,900');
-/* === fontawesome === */
-@import url('font-awesome.css');
-
-
 /*--------------------------------------------------------------------------
-	General Style
+  General Style
 --------------------------------------------------------------------------*/
 html, body {
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
+
 body {
   background: url(../images/page-background.png);
-  font-family: "Lato";
 } 
 
 .section {
@@ -32,15 +27,15 @@ body {
 }
 
 .forge-border-top {
-	border-top-width: 1px;
-	border-top-style: solid;
+  border-top-width: 1px;
+  border-top-style: solid;
 }
 
 .forge-right-pad {
-	padding-right: 15px;
+  padding-right: 15px;
 }
 /*--------------------------------------------------------------------------
-	Typography Style
+  Typography Style
 --------------------------------------------------------------------------*/
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -82,10 +77,10 @@ h4 {
     letter-spacing: 0.04em;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .btn-forge-white {
@@ -129,7 +124,7 @@ a:hover {
 
 
 /*--------------------------------------------------------------------------
-+	Main Menu Style
++ Main Menu Style
 --------------------------------------------------------------------------*/
 .mainmenu li.logo-wrapper a {
   border-right: 1px solid #E8E8E8;
@@ -141,6 +136,10 @@ a:hover {
   background-color: #FFF;
   border-bottom: 4px solid #4f8db3;
   z-index: 4;
+}
+.mainmenu {
+  width: 100%;
+  
 }
 .mainmenu ul {
   margin: 0;
@@ -166,6 +165,10 @@ a:hover {
 .mainmenu > ul > li.active > a {
   color: #4f8db3;
   font-weight: 600 !important;
+}
+
+.mainmenu #apply-but {
+
 }
 
 @media screen and (max-width: 979px) {
@@ -203,13 +206,9 @@ a:hover {
 =========================== */
 
 section.featured {
-  margin-top: -20px;
-	padding: 60px 0 80px;
-	background: #16a085;
-	color: #BDC4C3;
-  overflow: hidden;
-	background: #16a085;
-	color: #70B9B0;
+  padding: 90px 0px;
+  background: #16a085;
+  color: #70B9B0;
   height: 90%;
 }
 
@@ -233,13 +232,13 @@ section.featured {
 }
 
 section.featured h2.slogan {
-	color: #fff;
-	font-size: 60px;
-	font-weight: 900;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 900;
 }
 
 section.featured h2 {
-	border-bottom: 0px;
+  border-bottom: 0px;
 }
 
 section.featured p {
@@ -381,17 +380,31 @@ section.featured p {
 /*--------------------------------------------------------------------------
 + form Style
 --------------------------------------------------------------------------*/
+.forge-form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px 20px 10px 20px;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px #fff,0 0 4px #c8cfe6;
+  -moz-box-shadow: inset 0 1px #fff,0 0 4px #c8cfe6;
+  box-shadow: inset 0 1px #fff,0 0 4px #c8cfe6;
+  color: inset 0 1px #fff,0 0 4px #c8cfe6;
+}
 
 input.medium {
-	width: 50%;
+  width: 50%;
 }
 
 input.third {
-	width: 70%;
+  width: 70%;
 }
 
 /*--------------------------------------------------------------------------
-	Footer Style
+  Footer Style
 --------------------------------------------------------------------------*/
 .footer {
   background: #222;
@@ -415,7 +428,7 @@ footer ul {
 }
 
 footer ul li {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-copyright {
@@ -431,9 +444,9 @@ footer ul li {
 }
 
 /*--------------------------------------------------------------------------
-	FAQ Style
+  FAQ Style
 --------------------------------------------------------------------------*/
 .faq {
-	background: #fff;
-	margin-top: -10px;
+  background: #fff;
+  margin-top: -10px;
 }
