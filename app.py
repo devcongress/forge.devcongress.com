@@ -9,10 +9,6 @@ from flask import (
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URL'] = os.environ.get('DATABASE_URL')
-
-db = SQLAlchemy(app)
-
 
 @app.route('/')
 def home():
@@ -41,6 +37,9 @@ def teach():
         pass
 
 
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+db = SQLAlchemy(app)
+
 # Models, models.
 class Hacker(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -63,9 +62,9 @@ class Hacker(db.Model):
 
     def __init__(self, github, email, phone,
                  ambition, program, expectation, twitter=None, linkedin=None):
+        self.github = github
         self.email = email
         self.phone = phone
-        self.github = github
         self.ambition = ambition
         self.program = program
         self.expectation = expectation
