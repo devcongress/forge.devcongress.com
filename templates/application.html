@@ -26,22 +26,24 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#faq">FAQ</a></li>
 					<li><a href="#contact">Contact Us</a></li>
-					<li><a class="btn btn-primary" href="#register">apply</a></li>
+					<li><a class="btn btn-primary" href="/apply">apply</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div> <!-- navbar-default ends -->
+    {% block banner %}
 		<section class="featured">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2"> 
 					<div class="align-center">
 						<h2 class="slogan">A thing for hackers</h2>
 						<p class="lead">At Forge we believe that learning should be self-driven, therefore we want to give you the opportunity to be transformed into the kind of programmer you always wanted.</p>	
-						<a class="btn btn-forge-white" href="register">Start Now</a>
+						<a class="btn btn-forge-white" href="/apply">Start Now</a>
           </div>
         </div>
       </div>
     </section>
+    {% endblock %}
 
 		{% block body %}
 	    <div class="section" id="section-about">
