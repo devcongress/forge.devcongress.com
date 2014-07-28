@@ -1,14 +1,20 @@
 import os
 from datetime import datetime
 from flask.ext.sqlalchemy import SQLAlchemy
+from sqlalchemy.exc import IntegrityError
 from flask import (
     Flask,
     render_template,
-    request
+    request,
+    flash,
+    redirect,
+    url_for
 )
 
 
 app = Flask(__name__)
+app.secret_key = os.environ['FORGE_SECRET_KEY']
+app.config.from_object(__name__)
 
 @app.route('/')
 def home():
@@ -18,8 +24,14 @@ def home():
 @app.route('/apply', methods=['GET', 'POST'])
 def apply():
     if request.method == 'POST':
-        hacker = Hacker.from_forms(request.form)
-        return str(hacker)
+        try:
+            hacker = Hacker.from_forms(request.form)
+            db.session.add(hacker)
+            db.session.commit()
+            flash('Awesome! You should receive an email confirmation immediately')
+            return redirect(url_for('home'))
+        except IntegrityError:
+            return render_template('apply.html')
     else:
         return render_template('apply.html')
 
@@ -38,13 +50,18 @@ def teach():
 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+if not app.config['SQLALCHEMY_DATABASE_URI']:
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['FORGE_DATABASE_URL']
+
 db = SQLAlchemy(app)
+
 
 # Models, models.
 class Hacker(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
     # Personal.
+    fullname = db.Column(db.String, nullable=False)
     email = db.Column(db.String, unique=True, nullable=False)
     phone = db.Column(db.String, unique=True, nullable=False)
 
@@ -60,8 +77,9 @@ class Hacker(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 
-    def __init__(self, github, email, phone,
+    def __init__(self, fullname, github, email, phone,
                  ambition, program, expectation, twitter=None, linkedin=None):
+        self.fullname = fullname
         self.github = github
         self.email = email
         self.phone = phone
@@ -76,11 +94,12 @@ class Hacker(db.Model):
 
     @classmethod
     def from_forms(cls, form):
-        # Create a new hacker from the form data.
-        pass
+        return Hacker(**{
+            k: v if len(v.strip()) else None for k, v in form.items() if k != 'submit'
+        })
 
     def __repr__(self):
-        return '<Hacker %r>' % self.github
+        return '<Hacker %r (%r)>' % (self.fullname, self.github)
 
 if __name__ == '__main__':
     app.run(debug=True)
