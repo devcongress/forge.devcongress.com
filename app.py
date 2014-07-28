@@ -46,7 +46,6 @@ class Hacker(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
     # Personal.
-    nickname = db.Column(db.String(100), unique=True, nullable=False)
     email = db.Column(db.String, unique=True, nullable=False)
     phone = db.Column(db.String, unique=True, nullable=False)
 
@@ -62,9 +61,8 @@ class Hacker(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 
-    def __init__(self, nickname, email, phone, github,
+    def __init__(self, github, email, phone,
                  ambition, program, expectation, twitter=None, linkedin=None):
-        self.nickname = nickname
         self.email = email
         self.phone = phone
         self.github = github
