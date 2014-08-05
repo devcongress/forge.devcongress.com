@@ -31,6 +31,7 @@ def apply():
             flash('Awesome! You should receive an email confirmation immediately')
             return redirect(url_for('home'))
         except IntegrityError:
+            flash('Oops. This email address has already been registered.')
             return render_template('apply.html')
     else:
         return render_template('apply.html')
