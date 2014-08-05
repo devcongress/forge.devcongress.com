@@ -26,11 +26,13 @@ def apply():
     if request.method == 'POST':
         try:
             hacker = Hacker.from_forms(request.form)
+            print hacker
             db.session.add(hacker)
             db.session.commit()
             flash('Awesome! You should receive an email confirmation immediately')
             return redirect(url_for('home'))
-        except IntegrityError:
+        except IntegrityError as e:
+            print e
             flash('Oops. This email address has already been registered.')
             return render_template('apply.html')
     else:
@@ -101,6 +103,8 @@ class Hacker(db.Model):
 
     def __repr__(self):
         return '<Hacker %r (%r)>' % (self.fullname, self.github)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
