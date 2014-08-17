@@ -3,271 +3,231 @@
 <head>
 	{% block head %}
 	<meta charset="UTF-8">
-	<title>{% block title %} Forge {% endblock %}</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen">
+	 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, user-scalable=0" />
+    <title>{% block title %} Forge {% endblock %}</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700'
+    rel='stylesheet' type='text/css'>
+   	<link rel="stylesheet" type="text/css" href="{{ url_for('static',
+    filename='css/style.css') }}" media="all"/>
+   	<link rel="stylesheet" type="text/css" href="{{ url_for('static',
+    filename='css/bootstrap.min.css') }}" media="all"/>
+   	<link rel="stylesheet" type="text/css" href="{{ url_for('static',
+    filename='css/font-awesome.min.css') }}" media="all"/>
+   	<link rel="stylesheet" type="text/css" href="{{ url_for('static',
+    filename='css/font-lineicons.css') }}" media="all"/>
+  	<link rel="stylesheet" type="text/css" href="{{ url_for('static',
+    filename='css/animate.css') }}" media="all"/>
+  	<link rel="stylesheet" type="text/css" href="{{ url_for('static',
+    filename='css/toastr.min.css') }}" media="all"/>
 
 	{% endblock %}
 </head>
-<body>
+<body id="landing-page">
+	 <!-- Preloader -->
+	  <div id="mask">
+	        <div id="loader"></div>
+	  </div>
+
 	  <!-- Navigation & Logo-->
-        <div class="mainmenu-wrapper">
-	        <div class="container">
-		        <nav id="mainmenu" class="mainmenu">
-					<ul>
-						<li class="logo-wrapper"><a href="{{ url_for('home') }}">Forge</a></li>
-						<li class="active">
-							<a href="{{ url_for('home') }}">Home</a>
-						</li>
-						<li>
-							<a href="#section-about">About</a>
-						</li>
-						<li>
-							<a href="#section-faq">FAQ</a>
-						</li>
-						<li>
-							<a href="#section-footer">Contact-Us</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
+       <header>
+        <nav class="navigation navigation-header">
+            <div class="container">
+                <div class="navigation-brand">
+                    <div class="brand-logo">
+						<a href="{{ url_for('home') }}" class="logo"></a>
+						<span class="sr-only">[F]orge</span>
+                    </div>
+                    <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" 
+                    	data-target=".navigation-navbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navigation-navbar">
+                    <ul class="navigation-bar navigation-bar-right">
+                        <li class="featured"><a href="{{ url_for('apply') }}">Sign up</a></li>
+                    </ul>  
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="hero" class="static-header register-version light clearfix">
+
 	{% block body %}
-	<section class="featured">
-			<div class="container"> 
-				<div class="row mar-bot40">
-					<div class="col-md-8 col-md-offset-2"> 
+	<div class="text-heading">
+            <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">Do not wait &mdash; be the kind of 
+            <span class="highlight">hacker</span> you want to be!</h1>
+            <p class="animated hiding" data-animation="fadeInDown" data-delay="500">we believe learning should be 
+            self-driven, that is why we are giving you the opportunity to <br /> transform into the kind of programmer 
+            you can only dream of.</p>
+    </div>
+
+    <div class="container">
+			<div class="signup-wrapper animated hiding" data-animation="bounceInUp" data-delay="0">
+				<div class="row">
+						<form class="form-inline form-register form-register-small" method="post" action="#">
 						
-						<div class="align-center">
-							<h2 class="slogan">A thing for hackers</h2>
-							<p class="lead">
-							At Forge we believe that learning should be self-driven, therefore
-							we want to give you the opportunity to be transformed into the 
-							kind of programmer you always wanted.
-				
-							</p>	
-							<a class="btn btn-forge-white" href="#section-register">Start Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- About -->
-		<div class="section forge-section-head" id="section-about">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1>About</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	    <div class="section" >
-			<div class="container">
-				
-				<div class="row">
-					<div class="col-sm-6 col-md-4">
-						<div class="thumbnail text-center">
-							<i class="fa fa-code fa-5x"></i>
-							<div class="caption">
-								<h2>Learn</h2>
-								<p class="lead">
-									At Forge we encourage individuals to 
-									to come in knowing what they want to be good at and what they want 
-									to learn. 
-								</p>
-								<p class="lead">
-									We will give you the necessary tools and the environment for you 
-									to master whatever you want to be good at.
-								</p>
+							<div class="form-group">
+								<input size="30" type="text" class="form-control required" name="fullname" id="fullname" 
+								placeholder="Your name">
 							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-4">
-						<div class="thumbnail text-center">
-							<i class="fa fa-building-o fa-5x"></i>
-							<div class="caption">
-								<h2>Build</h2>
-								<p class="lead">
-									You will get the opportunity to build amazing and relevant 
-									products that will make a difference in the lives of people.
-
-								</p>
-								<p class="lead">
-									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-								</p>
+							
+							<div class="form-group">
+								<input size="25" type="email" class="form-control required email" name="email" id="email" 
+								placeholder="Email">
 							</div>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-4">
-						<div class="thumbnail text-center">
-							<i class="fa fa-share fa-5x"></i>
-							<div class="caption">
-								<h2>Contribute</h2>
-								<p class="lead">
-									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-								</p>
-								<p class="lead">
-									Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-								</p>
+							<div class="form-group password-wrapper">
+								<input type="phone" class="form-control required" name="tel" id="password" 
+								placeholder="Telephone">
 							</div>
+							<div class="form-group submit-wrap">
+								<input type="hidden" name="small-form"/>
+								<button type="submit" class="btn btn-primary btn-md">Get A Quick Feedback</button>
+							</div>
+						</form>
+				</div>
+			</div>
+		</div>
+		
+    </div>
+    
+    <div id="firms">
+        <div class="container">
+            <ul class="list-inline logos">
+                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="0" 
+                src="{{ url_for('static', filename='img/logos/rancard.png') }}" alt="" /></li>
+                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="200" 
+                src="{{ url_for('static', filename='img/logos/esoko.png') }}" alt="" /></li>
+                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="400" 
+                src="{{ url_for('static', filename='img/logos/dropifi.png') }}" alt="" /></li>
+                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="600" 
+                src="{{ url_for('static', filename='img/logos/retailtower.png') }}" alt="" /></li>
+            </ul>
+        </div>
+    </div>
+    
+    <a id="showHere"></a>
+    
+	<section id="about" class="section dark">
+        <div class="container">
+
+        <div class="tab-content alt">
+				<div class="tab-pane active" id="first-tab-alt">
+					<div class="section-content row">        
+						<div class="col-sm-6 animated hiding" data-animation="fadeInLeft">
+							<img src="{{ url_for('static', filename='img/features/af.png') }}" class="img-responsive" 
+							alt="process 3" />
+						</div>
+						<div class="col-sm-6 animated hiding" data-animation="fadeInRight">
+							<br/>
+							<article class="center">
+								<h3>FOR EVERY <span class="highlight">HACKER</span></h3>
+								<div class="sub-title">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br/> 
+								sdfs sit atmet sit dolor greand fdanrh sdfs</div>
+								<p>In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. 
+								Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, 
+								quam non erat mirum sapientiae lorem cupido patria esse cariorem. Quae qui non vident, 
+								nihilamane umquam magnum ac cognitione.</p>
+								<br/>
+								<a href="#" class="btn btn-secondary animated hiding" data-animation="bounceIn" 
+								data-delay="700">Register</a>
+								<a href="#" class="btn btn-secondary animated hiding" data-animation="bounceIn" 
+								data-delay="700">Train</a>
+							</article>
 						</div>
 					</div>
+                </div>
+	</section>
 
-				</div>
-			</div>
-		</div>
-		<!-- Application Form -->
-		<div class="section forge-section-head" id="section-register">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-							<h1>Get Involved</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	    <section class="section" >
-			<div class="container">
-				
-				<div class="row">
-					<div class="col-sm-6 col-md-offset-3 ">
-						<div class="forge-form">
-							<form action="{{ url_for('apply') }}"  method="post" role="form">
-								<div class="form-group">
-									<label for="fullName" >Full Name</label>
-										<input type="text" name="fullName" id="fullName" class="form-control third">
-								</div>
-								<div class="form-group">
-									<label for="email" >Email</label>
-										<input type="email" name="email" id="email" class="form-control third" >
-								</div>
-								<div class="form-group">
-									<label for="contact" >Phone Number</label>
-										<input type="tel" name="contact" id="contact" class="form-control medium">
-								</div>
-								<div class="form-group">
-									<label for="twitter">Links</label>
-									<div class="input-group">
-										<div class="input-group-addon medium">@</div>
-										<input type="text" name="twitter" id="twitter" class="form-control medium" placeholder="twitter">
-									</div>
-									<div class="input-group">
-										<div class="input-group-addon"><i class="fa fa-facebook"></i></div>
-										<input type="text" class="form-control medium" name="facebook" id="facebook" placeholder="Facebook">
-									</div>
-									<div class="input-group">
-										<div class="input-group-addon"><i class="fa fa-github"></i></div>
-										<input type="text" id="github" name="github" class="form-control medium" placeholder="GitHub">
-									</div>
-									<div class="input-group">
-										<div class="input-group-addon"><i class="fa fa-linkedin"></i></div>
-										<input type="text" id="linkedIn" name="linkedIn" placeholder="LinkedIn" class="form-control medium">
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="about">Please tell us about yourself</label>
-									<textarea name="about" id="" cols="30" rows="10" class="form-control"></textarea>
-								</div>
-								<div class="form-group">
-									<label for="background">Give a brief account of your programming experience</label>
-									<textarea name="background" id="background" cols="30" rows="10" class="form-control"></textarea>
-								</div>
-								<div class="form-group">
-									<label for="expectation">What do you intend to achieve through forge?</label>
-									<textarea name="expectation" id="expectation" cols="30" rows="10" class="form-control"></textarea>
-								</div>
-								<button type="submit" name="submit" id="submit" class="btn btn-success">Submit</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+	<section id="guarantee" class="long-block light">
+	    <div class="container">
+            <div class="col-md-12 col-lg-9">
+				<i class="icon icon-seo-icons-24 pull-left"></i>
+                <article class="pull-left">
+                    <h2><strong>JOIN</strong> THE NEXT CLASS NOW!</h2>
+                    <p class="thin">In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret.</p>
+                </article>
+            </div>
+			
+            
+        </div>
+    </section>
+    {% endblock body %}
 
-		<!-- faq -->
-		<div class="section forge-section-head" id="section-faq">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-							<h1>Frequently Asked Questions</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	    <section class="section faq">
-			<div class="container">
-								
-				<div class="row">
-					<div class="col-md-10">
-						<dl>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-							<dt>Lorem Ipsum</dt>
-							<dd>
-								Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus. 
-							</dd>
-						</dl>
-					</div>
-				</div>
-			</div>
-		</section>
+    {% block footer %}
 
 		<!-- Footer -->
-		<footer class="footer" id="section-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-						<ul class="forge-footer-span">
-							<li><a href="">Home</a></li>
-							<li><a href="">About</a></li>
-							<li><a href="">FAQ</a></li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul class="forge-footer-span">
-							<li>Address: </li>
-							<li>Phone: </li>
-							<li>Email: </li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul class="forge-footer-span">
-							<a href=""><i class="fa fa-facebook fa-3x forge-right-pad"></i></a>
-							<a href=""><i class="fa fa-twitter fa-3x forge-right-pad"></i></a>
-							<a href=""><i class="fa fa-google-plus fa-3x forge-right-pad"></i></a>
-							<li></li>
-						</ul>
-					</div>
-					
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="footer-copyright">&copy; 2014 Forge. All rights reserved</div>
-					</div>
-				</div>
-			</div>
-		</footer>
+		<footer id="footer" class="footer light">
+        <div class="container">
+            <div class="footer-content row">
+                <div class="col-sm-4">
+                    <div class="logo-wrapper">
+                        <img src="{{ url_for('static', filename='img/forge.png') }}" alt="logo" />
+                    </div>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Qui officia deserunt mollit anim id 
+                    est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Nisi ut aliquid ex ea commodi
+                     consequatur?</p>
+                    <p><strong>K0fi Doe, Founder</strong>.</p>
+                </div>
+                <div class="col-sm-5 social-wrap">
+                    <div class="footer-title">Social Networks</div>
+                    <ul class="list-inline socials">
+                        <li><a href="#"><span class="icon icon-socialmedia-08"></span></a></li>
+                        <li><a href="#"><span class="icon icon-socialmedia-07"></span></a></li>
+                        <li><a href="#"><span class="icon icon-socialmedia-09"></span></a></li>
+                        <li><a href="#"><span class="icon icon-socialmedia-16"></span></a></li>
+                    </ul>
+                  
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer-title">Our Contacts</div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <span class="icon icon-chat-messages-14"></span> 
+                            <a href="mailto:info@forge.com.gh">info@forge.com.gh</a>
+                        </li>
+                        <li>
+                            <span class="icon icon-seo-icons-34"></span> 
+                            2901 Moma road, Adabraka, Accra
+                        </li>
+                        <li>
+                            <span class="icon icon-seo-icons-17"></span>
+                            +233 - 234-456-7980
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">Forge &copy; 2014. All rights reserved.</div>
+    </footer>
+    
+    <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
 
-	{% endblock %}
+	{% endblock footer %}
+
+	 <!--[if lt IE 9]>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.11.0.min.js')}}"></script>
+    <![endif]-->  
+    <!--[if (gte IE 9) | (!IE)]><!-->  
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.1.0.min68b3.js') }}"></script>
+    <!--<![endif]-->  
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.flexslider-min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.nav.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.appear.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.plugin.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.countdown.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/waypoints.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/waypoints-sticky.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.validate.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/toastr.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/headhesive.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='mailchimp/js/mailing-list.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 	
-	 <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
