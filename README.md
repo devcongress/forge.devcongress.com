@@ -48,13 +48,13 @@ Just enough time for you to survive. 3 months: Day. Night. Weekend.
 
 We know at least 3 sources of projects:
 
-* #### Your own projects
+*  Your own projects
 
 You can continue working on your existing projects. One requirement though: they should be open source.
-* #### Existing open source projects
+*  Existing open source projects
 
 During the program we'd have fun digging into existing libraries and projects in all sort of languages. Perhaps you'd want to contribute documentation or send patches for bugs you discover.
-* #### Working with resident experts on their open source projects
+*  Working with resident experts on their open source projects
 
 We'd bring in resources in people. We call them _Resident Experts_ (we didn't invent that, it's an industry term). If they have new ideas for or existing open source projects that you wanna help them with, sure why not.
 
@@ -97,11 +97,3 @@ These 2 ([Github](https://github.com) and your blogposts) will be your external 
 
 Even though `FORGE` only makes money off of you when you successfully land a job after the program, we can't guarantee job placement. We encourage you to entertain recruiters who would contact you during any period of the program. Don't postpone until the final lap before you start searching for a job.
  We'd also invite a lot of potential employers during the course of the program to interact with you, passively assess you. Be assured though that we'd work our butts off, together with you, to get you a well paying job. Because that's the only way we make money.
-
-##### What is the hacker's creed?
-
-I am a hacker. It doesn’t mean I am a criminal or that I use my computer superpowers for evil.
-
-It means I continuously apply myself to learning and creating value with the computer as my primary tool. I never quit. I embrace challenges. I seek out problems and make them sorry. I go out of my way to provide elegant and jaw-dropping solutions to problems of significance. This is how I was `FORGE`d: through blood, sweat and tears I earn my hacker’s crest.
-
-I am a hacker. I am thus `FORGE`d!
