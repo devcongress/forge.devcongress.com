@@ -42,7 +42,7 @@ We hope you are not homeless (although that is not a prerequisite). We have no a
 
 ##### How long is `FORGE`?
 
-Just enough time for you to survive. 3 months: Day. Night. Weekend.
+3 months.
 
 ##### What kind of projects will I work on?
 
@@ -89,8 +89,8 @@ Umm, no. And honestly we'd never be! We think accredition adds unnecessary press
 ##### Will get a certificate after the programme?
 
 Even though we also think [Github is not your CV](https://blog.jcoglan.com/2013/11/15/why-github-is-not-your-cv/), we
-don't subscribe to that fully. Throughout your time at `FORGE` you'd work on a lot of project (both open and closed source) that interest you. You'd also have a very active blog documenting your everyday progress during `FORGE`.
-These 2 ([Github](https://github.com) and your blogposts) will be your external evidence your skills.
+don't subscribe to that fully. Throughout your time at `FORGE` you'd work on a lot of project (both open and closed source) that interest you. You'd also have a very active blog documenting your everyday progress.
+These 2 ([Github](https://github.com) and your blogposts) will be your external evidence.
  So no, we don't award certificates. You should concentrate on building an almost irresistible portfolio.
 
 ##### Can you guarantee that I will get a job after `FORGE`?
