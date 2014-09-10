@@ -90,3 +90,8 @@ These 2 ([Github](https://github.com) and your blogposts) will be your external 
 
 Even though `FORGE` only makes money off of you when you successfully land a job after the program, we can't guarantee job placement. We encourage you to entertain recruiters who would contact you during any period of the program. Don't postpone until the final lap before you start searching for a job.
  We'd also invite a lot of potential employers during the course of the program to interact with you, passively assess you. Be assured though that we'd work our butts off, together with you, to get you a well paying job. Because that's the only way we make money.
+
+##### So I don't need a CS degree after this, right?
+Your call.  
+One thing I know: Forge is not a replacement for quality Computer
+Science education.
