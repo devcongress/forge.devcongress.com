@@ -15,7 +15,8 @@ A few reasons. One or two may resonate with you.
 
 ##### What are the pre-requisites?
 
-First of all you should be insane. Insane enough to believe that your can transform your life in 3 months. Second you should be hungry and foolish. So hungry that you will make the most of any given chance and will beat your best performance ever. And be foolish enough to commit your life to that end. Thirdly, you should have evidence to prove you really want this: have an okay programming knowledge.
+At least 3 months programming experience. Ideally the language shouldn't be PHP
+but we're okay with that too.
 
 ##### I don't have any programming experience can I apply?
 
@@ -31,7 +32,7 @@ All good things are free: air, sunlight, water, life and `FORGE`!
 
 ##### Do you provide accommodation and food?
 
-We hope you are not homeless (although that is not a prerequisite). We have no accommodation arrangements at the moment. But that will soon be a thing of the past. We want to rule your entire life so we will give accommodation in the near future. But feel free to talk to us about it. We will do our best to help.
+No accommodation and an abundance of coffee.
 
 ##### How long is `FORGE`?
 
@@ -65,15 +66,11 @@ No.
 
 ##### Will I have to bring my own laptop?
 
-Yes, and you should have an operating system already installed. Even better if you set it up with your favorite text editors, IDEs, and programming language compilers and VMs.
+Yes, and you should have an operating system already installed. Even better if you set it up with your favorite text editors, IDEs, and programming language compilers and VMs. Otherwise there'd be time to setup your machine.
 
 ##### How many hours will I commit a day?
 
-`FORGE` is as full-time as full-time job so expect to commit at least 8 hours per day for 5 days a week. It doesn't mean 8 hours of continuous instruction. No. We believe that (too much) classes will destroy any potential for authentic creativity so we've reduced the number of lecture sessions per week to only specific days and a total of about 5 hours.
-
-##### What happens after `FORGE`?
-
-Hard labour! `FORGE`! is no play ground. It is a life and death matter. In 3 months, we are going to transform you into a world class programmer. That should give you a clue. We will drive you. Push you beyond your limits, challenge all your assumptions and best efforts, we will destroy your comfort zone. We will own you for 3 months. Your life will not be the same.
+`FORGE` is as full-time as full-time job so expect to commit at least 8 hours per day for 5 days a week. It doesn't mean 8 hours of continuous instruction. No. We believe that (too much) classes will destroy any potential for authentic creativity so we've reduced the number of lecture sessions per week to only specific days and a total of 5 hours.
 
 ##### Is `FORGE` an accredited educational institute?
 
