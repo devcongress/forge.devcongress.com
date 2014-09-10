@@ -4,21 +4,14 @@
 
 ##### Why should I go to `FORGE`?
 
-A few reasons. Maybe one or two will resonate with you.
-
-You studied Computer Science in Ghana but its effect on you is no better than the effect of drug abuse.
-
-You didn't study Computer Science but you feel that doesn't rob you of your share of the computer cake.
-
-You've been programming for some time now but still feel empty. Deep down in your heart you admit, rather depressingly, to yourself that you write poor code and build mediocre products. But you're getting away with them because you don't know any better. Neither does the next programmer on the block.
-
-You contribute to [StackOverflow](https://stackoverflow.com) by consuming and never stopping to help a fellow out because you honestly think you can't. Neither do you comment on any programmer forum, not even on the liberal land of IRC where bad answers are tolerated, and history is created with no intention of going back.
-
-You know you should get better so you're ready to start!
-
-This is the first time you're hearing the phrase **it works on my computer**.
-
-You are an exceptional programmer, out of work or with a little free time, who wants to hang around.
+A few reasons. One or two may resonate with you.
+* You studied Computer Science in Ghana but its effect on you is no better than the effect of drug abuse.
+* You didn't study Computer Science but you feel that doesn't rob you of your share of the computer cake.
+* You've been programming for some time now but still feel empty. Deep down in your heart you admit, rather depressingly, to yourself that you write poor code and build mediocre products. But you're getting away with them because you don't know any better. Neither does the next programmer on the block.
+* You contribute to [StackOverflow](https://stackoverflow.com) by consuming and never stopping to help a fellow out because you honestly think you can't. Neither do you comment on any programmer forum, not even on the liberal land of IRC where bad answers are tolerated, and history is created with no intention of going back.
+* You know you should get better so you're ready to start!
+* This is the first time you're hearing the phrase **it works on my computer**.
+* You are an exceptional programmer, out of work or with a little free time, who wants to hang around.
 
 ##### What are the pre-requisites?
 
