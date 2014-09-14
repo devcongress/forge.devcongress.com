@@ -15,7 +15,7 @@ A few reasons. One or two may resonate with you.
 
 ##### What are the pre-requisites?
 
-[English Language](https://en.wikipedia.org/wiki/English_language) literacy--since it will be the language of communication and instruction. At least 3 months programming experience. Ideally the language shouldn't be PHP but we're okay with that too knowing you're willing to experiment with other, superior languages. Also a minimum typing speed of 40 wpm is required.
+[English Language](https://en.wikipedia.org/wiki/English_language) literacy since it will be the language of communication and instruction. At least 3 months programming experience. Ideally the language shouldn't be PHP but we're okay with that too knowing you're willing to experiment with other, superior languages. Also a minimum typing speed of 40 wpm is required.
 
 ##### I don't have any programming experience can I apply?
 
