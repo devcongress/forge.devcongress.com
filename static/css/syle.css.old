@@ -44,7 +44,6 @@ strong { font-family: 'Lato', sans-serif; font-weight: 700; }
 
 /* Global & Helpers */
 body { color: #000; font-size: 16px; line-height:27px; background: url('../img/background/bg.png') no-repeat center center; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-attachment: fixed; margin: 0; }
-
 h1 { font-size: 58px; font-weight: 300; display: block; } 
 h2 { font-size: 47px; font-weight: 300; display: block; } 
 h3 { font-size: 34px; font-weight: 300; display: block; } 
@@ -66,8 +65,7 @@ a:hover, a:active, a:focus { color: #FF1A1A; text-decoration: none; outline: non
 
 hr { width: 100%; border-top: 1px solid #E9E9E9; display: inline-block; }
 
-#register-page .light { background: #661A66; opacity: .9; }
-.light { color: #fff; }
+.light { color: #fff; background: #333; }
 .dark { color: #000; background: #fff; }
 .highlight { color: #FF1A1A; } 
 .center {text-align:center;}
@@ -179,7 +177,7 @@ article { text-align: left; }
 .panel-group { text-align: left; }
 .panel-group .panel { -webkit-box-shadow: 0 0 0 transparent; box-shadow: 0 0 0 transparent; border: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
 .panel-group .panel > .panel-heading { border:none; padding: 0; border-bottom: none; border-top-right-radius: 0; border-top-left-radius: 0; }
-.panel-group .panel > .panel-heading a { background: #6D5252; color: #fff; width: 100%; display: block; font-size: 17px; line-height: 22px; padding: 15px; position: relative; padding-left: 50px; }
+.panel-group .panel > .panel-heading a { background: #FF1A1A; color: #fff; width: 100%; display: block; font-size: 17px; line-height: 22px; padding: 15px; position: relative; padding-left: 50px; }
 .panel-group .panel > .panel-heading a.collapsed { color: #8e959c; background-color: #eff3f6; }
 .panel-group .panel > .panel-heading a.collapsed:Hover, 
 .panel-group .panel > .panel-heading a:Hover { background: #dadfe4; color: #6b7681; }
@@ -285,7 +283,7 @@ blockquote:after { font-family: "line-icons";  position: absolute; color: #FF1A1
 /* Hero section */
 #hero .btn-primary:hover, #hero .btn-primary.hovered { background: rgba(255, 26, 26, 0.96);  border:1px solid #FF1A1A;}
 #hero .list-inline { margin:0; }
-.static-header {  min-height: 1155px; position: relative; }
+.static-header { background: url('../img/background/low_poly_background.jpg') no-repeat center center; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-attachment: fixed; min-height: 1155px; position: relative; }
 .text-heading { position: relative; width: 100%; left: 0; right: 0; text-align: center; padding-top: 135px; }
 .text-heading p { font-size: 23px; font-weight: 300; }
 .static-header h4 { text-align: center; display: block; position: absolute; bottom: 20px; left: 0; right: 0; width: 100%; margin-bottom: 0; }
@@ -526,10 +524,7 @@ input[type=file]:focus, input[type=radio]:focus, input[type=checkbox]:focus { ou
 #awards .list-inline > li a:hover { opacity: 0.7; }
 
 /* Footer */
-
-.container .foot{background: #661A66; opacity: .9;}
-#footer .wide{width: 100%; background: #661A66; opacity: .9; padding-bottom: 30px}
-.footer { background: url('../img/background/bg.png') repeat top center; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-attachment: fixed; color: #661A66; font-weight: 300; }
+.footer { background: url('../img/background/bg.png') repeat top center; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-attachment: fixed; color: #661A66; font-weight: 300;}
 .footer p, .footer li { color: #fff; }
 .footer p { font-size: 15px; line-height: 24px; }
 .footer a:hover { text-decoration: underline; }

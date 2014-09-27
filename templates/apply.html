@@ -1,0 +1,104 @@
+{% extends 'application.html' %}
+
+{% block bodyId %} id = "register-page" {% endblock %}
+    {% block preloader %}
+    {% endblock %}
+{% block body %}
+    <div id="hero" class="static-header light">
+        <div class="text-heading">
+            <h1>Register!</h1>
+            <em>(Important: You should have at least 3 months programming experience as at the time of application.)
+
+</em>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <form class="form form-register dark" id="registration"
+                        method="post" action="{{ url_for('apply') }}">
+                        <div class="form-group">
+                            <label for="fullname" class="col-sm-3 col-xs-12 control-label">Full Name</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="text" class="form-control required" name="fullname" id="fullname" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="col-sm-3 col-xs-12 control-label">Phone </label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="text" class="form-control"
+                                name="phone" id="phone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-3 col-xs-12 control-label">Email</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="email" class="form-control required email" name="email" id="email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+	                        <label for="github" class="col-sm-3 col-xs-12 control-label">GitHub</label>
+	                                                    <div class="col-sm-9 col-xs-12">
+	                        <input class="form-control" id="github" name="github" placeholder="GitHub username">
+                </div></div>
+                        <div class="form-group">
+									<label for="twitter" class="col-sm-3 col-xs-12 control-label">Others</label>
+									                            <div class="col-sm-9 col-xs-12">
+									<div class="input-group col-xs-12">
+										<div class="input-group-addon">@</div>
+										<input class="form-control" type="text" name="twitter" id="twitter" placeholder="twitter">
+									</div>
+									<div class="input-group col-xs-12">
+										<div class="input-group-addon"><i class="fa fa-linkedin"></i></div>
+										<input class="form-control" type="text" id="linkedin" name="linkedin" placeholder="LinkedIn">
+									</div></div>
+								</div>
+								
+                        <div class="form-group">
+									<label for="ambition" class="col-xs-12 control-label ambition">What do you want to be doing 2 years from now?</label>                            
+									<div class="col-xs-12">
+									<textarea class="form-control"
+                                        name="ambition" id="ambition" cols="30" rows="10"></textarea>
+									</div>
+                        </div>
+								
+								<div class="form-group">
+									<label for="program" class="col-xs-12 control-label program">Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".</label>
+									<div class="col-xs-12">
+									<textarea class="form-control" name="program" id="background" cols="30" rows="10"></textarea></div>
+								</div>
+								
+								<div class="form-group">
+									<label for="expectation" class="col-xs-12 control-label expectation">Why do you want to attend <code>FORGE</code>?</label>
+									<div class="col-xs-12">
+									<textarea class="form-control" name="expectation" id="expectation" cols="30" rows="10"></textarea></div>
+								</div>
+                        
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"
+                                        name="newsletter" value="1"> Subscribe to the monthly newsletter
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Get started</button>
+                    </form>
+                    <p class="agree-text"></p>       
+                </div>
+            </div>
+        </div>       
+        <h4>These companies <span>trust us</span></h4>        
+    </div>        
+        {% block firms %}
+        {{super() }}
+        {% endblock %}
+ 
+
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}

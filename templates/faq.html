@@ -1,0 +1,68 @@
+{% extends 'application.html' %}
+
+{% block bodyId %} id = "register-page"  {% endblock %}
+{% block preloader %} {% endblock %}
+
+{% block body %}
+    <div id="hero" class="static-header light">
+            <section id="sc-accordion" class="section">
+            <div class="container">
+                    <h3 class="text-center">Frequently Ask Question</h3>
+                    <div class="panel-group dark" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">
+                                    Toggle panel Item #1
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <small>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore.</small>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                              <div class="panel-heading">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="">
+                                    Toggle panel Item #2
+                                  </a>
+                              </div>
+                              <div id="collapseTwo" class="panel-collapse collapse in">
+                                  <div class="panel-body">
+                                      <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit tortor, dictum in gravida nec, aliquet non lorem. Donec vestibulum justo a diam ultricies pellentesque. Quisque mattis diam vel lacus tincidunt elementum. Sed vitae adipiscing turpis. Aenean ligula nibh, molestie id viv erra a, dapibus at dolor. In iaculis vive rra neque, ac eleifend ante lobo rtis id. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum.</small>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
+                                  Toggle panel Item #3
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <small>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore.</small>
+                                </div>
+                            </div>
+                        </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" class="collapsed">
+                                  Toggle panel Item #4
+                                </a>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <small>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>     
+        <h4>These companies <span>trust us</span></h4>        
+    </div>
+    {% block firms %}
+    {{ super() }}
+    {% endblock %} 
+{% endblock %}

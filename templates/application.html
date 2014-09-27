@@ -24,11 +24,13 @@
 
 	{% endblock %}
 </head>
-<body id="landing-page">
+<body {% block bodyId %}id="landing-page"{% endblock %}>
+{% block preloader %}
 	 <!-- Preloader -->
 	  <div id="mask">
 	        <div id="loader"></div>
 	  </div>
+      {% endblock %}
 
 	  <!-- Navigation & Logo-->
        <header>
@@ -47,6 +49,13 @@
                     </button>
                 </div>
                 <div class="navigation-navbar">
+                 <ul class="navigation-bar navigation-bar-left">
+                        <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="{{ url_for('apply') }}">Register</a></li>
+                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                    </ul>
                     <ul class="navigation-bar navigation-bar-right">
                         <li class="featured"><a href="{{ url_for('apply') }}">Sign up</a></li>
                     </ul>  
@@ -54,15 +63,14 @@
             </div>
         </nav>
     </header>
+	{% block body %}
     <div id="hero" class="static-header register-version light clearfix">
 
-	{% block body %}
 	<div class="text-heading">
-            <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">Do not wait &mdash; be the kind of 
-            <span class="highlight">hacker</span> you want to be!</h1>
-            <p class="animated hiding" data-animation="fadeInDown" data-delay="500">we believe learning should be 
-            self-driven, that is why we are giving you the opportunity to <br /> transform into the kind of programmer 
-            you can only dream of.</p>
+            <h1 class="animated hiding" data-animation="bounceInDown"
+            data-delay="0">This is not just a class, it's a <strong
+                class="highlight">club!</strong></h1> 
+            <p class="animated hiding" data-animation="fadeInDown" data-delay="500">sign up into the most brutal 12 week hacking training program with some of the best hackers in Africa.</p> <em>Leave your name and contact below, we will get back to you.</em>
     </div>
 
     <div class="container">
@@ -85,7 +93,8 @@
 							</div>
 							<div class="form-group submit-wrap">
 								<input type="hidden" name="small-form"/>
-								<button type="submit" class="btn btn-primary btn-md">Get A Quick Feedback</button>
+								<button type="submit" class="btn btn-primary
+                                    btn-md">I want to know more</button>
 							</div>
 						</form>
 				</div>
@@ -93,7 +102,7 @@
 		</div>
 		
     </div>
-    
+    {% block firms %}    
     <div id="firms">
         <div class="container">
             <ul class="list-inline logos">
@@ -108,6 +117,7 @@
             </ul>
         </div>
     </div>
+    {% endblock %}
     
     <a id="showHere"></a>
     
@@ -144,11 +154,14 @@
 
 	<section id="guarantee" class="long-block light">
 	    <div class="container">
-            <div class="col-md-12 col-lg-9">
+            <div class="col-md-12 col-lg-12">
 				<i class="icon icon-seo-icons-24 pull-left"></i>
                 <article class="pull-left">
                     <h2><strong>JOIN</strong> THE NEXT CLASS NOW!</h2>
                     <p class="thin">In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret.</p>
+                </article>
+                <article class="pull-right">
+                    <a href="{{ url_for('apply') }}" class="btn btn-secondary animated hiding getin" data-animation="bounceIn" data-delay="700">Get In</a>
                 </article>
             </div>
 			
@@ -161,7 +174,8 @@
 
 		<!-- Footer -->
 		<footer id="footer" class="footer light">
-        <div class="container">
+            <div class="wide">
+        <div class="container foot">
             <div class="footer-content row">
                 <div class="col-sm-4">
                     <div class="logo-wrapper">
@@ -202,6 +216,7 @@
             </div>
         </div>
         <div class="copyright">Forge &copy; 2014. All rights reserved.</div>
+    </div>
     </footer>
     
     <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
