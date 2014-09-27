@@ -24,6 +24,11 @@
 
 	{% endblock %}
 </head>
+{% macro active(item) -%}
+    {% if item == request.path %}
+        class="active"
+        {% endif %}
+{%- endmacro %}
 <body {% block bodyId %}id="landing-page"{% endblock %}>
 {% block preloader %}
 	 <!-- Preloader -->
@@ -50,11 +55,11 @@
                 </div>
                 <div class="navigation-navbar">
                  <ul class="navigation-bar navigation-bar-left">
-                        <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+                     <li {{ active('/') }}><a href="{{ url_for('home') }}">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#team">Team</a></li>
-                        <li><a href="{{ url_for('apply') }}">Register</a></li>
-                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                        <li {{ active('/apply') }}><a href="{{ url_for('apply') }}">Register</a></li>
+                        <li {{ active('/faq') }}><a href="{{ url_for('faq') }}">FAQ</a></li>
                     </ul>
                     <ul class="navigation-bar navigation-bar-right">
                         <li class="featured"><a href="{{ url_for('apply') }}">Sign up</a></li>
