@@ -1,0 +1,13 @@
+Hello, {{ name }} 
+
+We're super excited for your interest in the first FORGE Developer Training Program, and we hope you are too. 
+
+Our Recruitment Team will be selecting the top 30 suitable applicants for the first iteration of the program. 
+
+You'll get an email as soon as the selection is completed. That will include materials relevant to starting the training program as well as contents of the program. 
+
+Have a great day!
+
+Regards,
+Forge Team 
+

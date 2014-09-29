@@ -122,29 +122,26 @@
 
     // Form validation - sign up
 	toastr.options = {"positionClass": "toast-top-full-width"};
-    if( $('.form-register').length ) {
-      $('.form-register').validate({
+    if( $('.form-apply').length ) {
+      $('.form-apply').validate({
         rules: {
-          password: {
-            minlength: 5
-          },
-          confirmPassword: {
-            minlength: 5,
-            equalTo: "#password"
-          }
+            fullname: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            phone: "required",
+            ambition: "required",
+            program: "required",
+            expectation: "required"
         },
         messages: {
-          fullname: "Please enter your fullname",
-          password: {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long"
-          },
-          confirmPassword: {
-            required: "Please provide a password",
-            minlength: "Your password must be at least 5 characters long",
-            equalTo: "Please enter the same password as above"
-          },
-          email: "Please enter a valid email address"
+          fullname: "Please enter your Full Name",
+          email: "Please enter a valid email address",
+          phone: "Please provide your phone number",
+          ambition: "Your ambition is important",
+          program: "You must answer this simple test",
+          expectation: "You reason is important to us"   
         },      
         submitHandler: function(form) {
           var $this = $(form);
@@ -154,11 +151,51 @@
             data: $this.serialize(),
           })
           .done(function(msg) {
-            if( msg == 'ok' ) {
-              toastr.success('Thank you for signing up.');
+            if( msg.success == true ) {
+              toastr.success(msg.msg);
               $this[0].reset();
             } else {
-              toastr.error('An error occured. Please try again later.');
+              toastr.error(msg.msg);
+            }
+          })
+          .fail(function() {
+            toastr.error('An error occured. Please try again later.');
+          });
+    }
+  });
+    }
+    });
+
+    
+    //Enquery form
+    if( $('.form-register-small').length ) {
+      $('.form-register-small').validate({
+        rules: {
+            fullname: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            phone: "required",
+        },
+        messages: {
+          fullname: "Please enter your Full Name",
+          email: "Please enter a valid email address",
+          phone: "Please provide your phone number",
+        },      
+        submitHandler: function(form) {
+          var $this = $(form);
+          $.ajax({
+            url: $this.attr('action'),
+            type: 'POST',
+            data: $this.serialize(),
+          })
+          .done(function(msg) {
+            if( msg.success == true ) {
+              toastr.success(msg.msg);
+              $this[0].reset();
+            } else {
+              toastr.error(msg.msg);
             }
           })
           .fail(function() {
@@ -167,7 +204,4 @@
         }      
       });
     }
-
-  });
-
 })();
