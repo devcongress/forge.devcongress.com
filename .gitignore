@@ -54,3 +54,8 @@ docs/_build/
 
 # Virtualenv
 venv/
+
+#vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*~
